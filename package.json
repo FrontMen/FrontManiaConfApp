@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start-ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "test": "jest"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/runtime": "^7.4.3",
+    "@types/react-native": "^0.57.43",
     "babel-jest": "^24.7.1",
     "jest": "^24.7.1",
     "metro-react-native-babel-preset": "^0.53.1",
