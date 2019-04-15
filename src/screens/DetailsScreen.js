@@ -1,5 +1,6 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView } from 'react-native';
+import Details from '../components/Details';
 
 export default class OtherScreen extends React.Component {
     static navigationOptions = {
@@ -12,7 +13,7 @@ export default class OtherScreen extends React.Component {
 
         return (
             <SafeAreaView>
-                <Text>My details for {id}</Text>
+                <Details id={id}/>
             </SafeAreaView>
         )
     }
