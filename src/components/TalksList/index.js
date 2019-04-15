@@ -1,3 +1,7 @@
-import TalksList from './TalksList';
+import TalksList from './TalksListContainer';
+import reducer from './TalksListReducer';
 
-export default TalksList;
+export {
+    TalksList as default,
+    reducer,
+};
