@@ -19,6 +19,7 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
 
 const mapStateRoProps = (state) => ({
     rooms: state.rooms,
+    selectedRoomId: state.talks.selectedRoomId,
 });
 
 export default connect(mapStateRoProps, mapDispatchToProps)(RoomsMenuContainer);

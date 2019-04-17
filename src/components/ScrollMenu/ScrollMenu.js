@@ -3,18 +3,18 @@ import {ScrollView, findNodeHandle} from 'react-native';
 import ScrollMenuItem from './ScrollMenuItem';
 import styles from './ScrollMenu.styles';
 
-const ScrollMenu = ({items, keyProp, labelProp, style, onSelectionChanged}) => {
+const ScrollMenu = ({items, selectedId, keyProp, labelProp, style, onSelectionChanged}) => {
     const scrollView = React.useRef(null);
-    const [selectedIndex, setSelectedIndex] = React.useState(0);
 
-    const onItemClick = (index, itemRef) => {
-        setSelectedIndex(index);
-        onSelectionChanged(items[index].id);
+    const onItemClick = (item, itemRef) => {
+        onSelectionChanged(item[keyProp]);
 
+        // TODO: Find how to scroll to element knowing only its id
+        // TODO: Add centering element after scroll
         itemRef.current.measureLayout(
             findNodeHandle(scrollView.current),
             (x, y) => scrollView.current.scrollTo({x, animated: true})
-        );
+        )
     };
 
     return (
@@ -30,7 +30,7 @@ const ScrollMenu = ({items, keyProp, labelProp, style, onSelectionChanged}) => {
                         item,
                         index,
                         labelProp,
-                        selectedIndex,
+                        isSelected: item[keyProp] === selectedId,
                         onItemClick,
                     }}/>
                 ))
