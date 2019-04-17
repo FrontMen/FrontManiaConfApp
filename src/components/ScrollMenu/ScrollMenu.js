@@ -9,13 +9,12 @@ const ScrollMenu = ({items, keyProp, labelProp, style, onSelectionChanged}) => {
 
     const onItemClick = (index, itemRef) => {
         setSelectedIndex(index);
-        onSelectionChanged(items[index]);
+        onSelectionChanged(items[index].id);
 
         itemRef.current.measureLayout(
             findNodeHandle(scrollView.current),
             (x, y) => scrollView.current.scrollTo({x, animated: true})
         );
-        console.log(itemRef);
     };
 
     return (

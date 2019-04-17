@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-import TalksList from '../components/TalksList';
+import Dashboard from '../components/Dashboard';
 import { DETAILS } from '../navigators/NavigationConsts';
 
 export default class OtherScreen extends React.Component {
@@ -13,7 +13,7 @@ export default class OtherScreen extends React.Component {
     render () {
         return (
             <SafeAreaView>
-                <TalksList goToDetails={this.navigateToDetails}/>
+                <Dashboard goToDetails={this.navigateToDetails}/>
             </SafeAreaView>
         )
     }

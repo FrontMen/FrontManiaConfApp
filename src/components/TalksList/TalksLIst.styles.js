@@ -8,12 +8,6 @@ const talkItem = {
 };
 
 const styles = StyleSheet.create({
-    tasksListView: {
-        padding: 10,
-    },
-    talksList: {
-        height: '100%',
-    },
     talkItem: {
         ...talkItem,
         marginTop: 10,

@@ -1,7 +1,5 @@
 import React from 'react';
-import {View, FlatList} from 'react-native';
-import {DUMMY_ROOMS} from '../../assets/dummyData';
-import ScrollMenu from '../ScrollMenu';
+import {FlatList} from 'react-native';
 import TalkItem from './TalkItem';
 import styles from './TalksLIst.styles';
 
@@ -17,20 +15,11 @@ const TalksList = ({talks, goToDetails}) => {
     );
 
     return (
-        <View style={styles.tasksListView}>
-            <ScrollMenu
-                items={DUMMY_ROOMS}
-                keyProp="id"
-                labelProp="name"
-                onSelectionChanged={(item) => console.log(item)}
-            />
-            <FlatList
-                keyExtractor={({title}) => title}
-                data={talks}
-                renderItem={renderItem}
-                style={styles.talksList}
-            />
-        </View>
+        <FlatList
+            keyExtractor={({title}) => title}
+            data={talks}
+            renderItem={renderItem}
+        />
     );
 };
 

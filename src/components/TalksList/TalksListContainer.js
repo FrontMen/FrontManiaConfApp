@@ -11,7 +11,7 @@ const TalksListContainer = (props) => {
 };
 
 const mapStateToProps = ({talks}) => ({
-    talks,
+    talks: talks.talks,
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
