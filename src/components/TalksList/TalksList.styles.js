@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const talkItem = {
     borderStyle: 'solid',
@@ -15,6 +15,12 @@ const styles = StyleSheet.create({
     firstTalkItem: {
         ...talkItem,
     },
+    talkItemContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    }
 });
 
 export default styles;

@@ -1,3 +1,3 @@
-export const HOME = 'Home';
-export const OTHER = 'Other';
+export const LIKED = 'Liked';
+export const TALKS = 'Talks';
 export const DETAILS = 'Details';

@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlatList} from 'react-native';
 import TalkItem from './TalkItem';
-import styles from './TalksLIst.styles';
+import styles from './TalksList.styles';
 
 const TalksList = ({talks, goToDetails}) => {
     const renderItem = ({item, index}) => (

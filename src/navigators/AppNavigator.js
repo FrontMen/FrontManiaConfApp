@@ -1,18 +1,18 @@
 import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
 
-import HomeScreen from '../screens/HomeScreen';
-import OtherScreen from '../screens/OtherScreen';
+import LikedScreen from '../screens/LikedScreen';
+import TalksScreen from '../screens/TalksScreen';
 import DetailScreen from '../screens/DetailsScreen';
-import { DETAILS, HOME, OTHER } from './NavigationConsts';
+import { DETAILS, HOME, TALKS } from './NavigationConsts';
 
 const stackNavigation = createStackNavigator({
-    [OTHER]: OtherScreen,
+    [TALKS]: TalksScreen,
     [DETAILS]: DetailScreen,
 });
 
 export default createBottomTabNavigator({
-    [HOME]: HomeScreen,
-    [OTHER]: stackNavigation,
+    [HOME]: LikedScreen,
+    [TALKS]: stackNavigation,
 }, {
-    initialRouteName: OTHER,
+    initialRouteName: TALKS,
 });

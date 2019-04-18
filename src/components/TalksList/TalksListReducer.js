@@ -1,5 +1,6 @@
 import {handleActions} from 'redux-actions';
 import {
+    TOGGLE_FAVORITE_TALK,
     SELECT_ROOM,
     TALKS_LOADED,
 } from './TalksListActionTypes';
@@ -13,6 +14,25 @@ const defaultState = {
 };
 
 const reducer = handleActions({
+    [TOGGLE_FAVORITE_TALK]: (state, action) => {
+        const allTalks = state.allTalks.map((talk) => {
+            if (talk.id === action.payload) {
+                return {
+                    ...talk,
+                    isFavorite: !talk.isFavorite,
+                }
+            }
+            return talk;
+        });
+        return {
+            ...state,
+            allTalks,
+            talks: filterTalks({
+                talks: allTalks,
+                roomId: state.selectedRoomId,
+            }),
+        }
+    },
     [SELECT_ROOM]: (state, action) => ({
         ...state,
         selectedRoomId: action.payload,

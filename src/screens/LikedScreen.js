@@ -1,9 +1,9 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
 
-export default class HomeScreen extends React.Component {
+export default class LikedScreen extends React.Component {
     static navigationOptions = {
-        title: "Hello",
+        title: "Liked",
     };
 
     render () {

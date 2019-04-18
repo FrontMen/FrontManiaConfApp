@@ -3,9 +3,9 @@ import { SafeAreaView } from 'react-native';
 import Dashboard from '../components/Dashboard';
 import { DETAILS } from '../navigators/NavigationConsts';
 
-export default class OtherScreen extends React.Component {
+export default class TalksScreen extends React.Component {
     static navigationOptions = {
-        title: "Other",
+        title: "Talks",
     };
 
     navigateToDetails = (id) => this.props.navigation.navigate(DETAILS, {id});
