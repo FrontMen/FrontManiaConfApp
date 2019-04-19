@@ -1,9 +1,9 @@
-import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
+import {createBottomTabNavigator, createStackNavigator} from 'react-navigation';
 
-import LikedScreen from '../screens/LikedScreen';
+import FavoriteScreen from '../screens/FavoriteScreen';
 import TalksScreen from '../screens/TalksScreen';
 import DetailScreen from '../screens/DetailsScreen';
-import { DETAILS, HOME, TALKS } from './NavigationConsts';
+import { DETAILS, FAVORITE, TALKS } from './NavigationConsts';
 
 const stackNavigation = createStackNavigator({
     [TALKS]: TalksScreen,
@@ -11,8 +11,8 @@ const stackNavigation = createStackNavigator({
 });
 
 export default createBottomTabNavigator({
-    [HOME]: LikedScreen,
     [TALKS]: stackNavigation,
+    [FAVORITE]: FavoriteScreen,
 }, {
     initialRouteName: TALKS,
 });

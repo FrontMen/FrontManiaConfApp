@@ -1,8 +1,9 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
+import {BODY_PADDING} from '../../styles/variables';
 
 const styles = StyleSheet.create({
     details: {
-        padding: 10,
+        padding: BODY_PADDING,
         height: '100%',
     },
     detailsTitle: {
