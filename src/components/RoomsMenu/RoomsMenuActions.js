@@ -1,7 +1,7 @@
 import {createAction} from 'redux-actions';
 import {ROOMS_LOADED} from './RoomsMenuActionTypes';
 import {DUMMY_ROOMS} from '../../assets/dummyData';
-import {actions} from '../TalksList';
+import {actions} from '../Dashboard';
 
 const roomsLoaded = createAction(ROOMS_LOADED);
 
@@ -18,4 +18,5 @@ export const loadRooms = () =>
         , 1000);
     };
 
-export const selectRoom = actions.selectRoom;
+export const selectRoom = (roomId) =>
+    (dispatch) => dispatch(actions.selectRoom(roomId));

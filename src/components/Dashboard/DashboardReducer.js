@@ -3,7 +3,7 @@ import {
     TOGGLE_FAVORITE_TALK,
     SELECT_ROOM,
     TALKS_LOADED,
-} from './TalksListActionTypes';
+} from './DashboardActionTypes';
 
 const filterTalks = ({talks, roomId}) => talks.filter((talk) => talk.roomId === roomId);
 

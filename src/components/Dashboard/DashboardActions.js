@@ -3,7 +3,7 @@ import {
     TOGGLE_FAVORITE_TALK,
     SELECT_ROOM,
     TALKS_LOADED,
-} from './TalksListActionTypes';
+} from './DashboardActionTypes';
 import {DUMMY_TALKS} from '../../assets/dummyData';
 
 const talksLoaded = createAction(TALKS_LOADED);

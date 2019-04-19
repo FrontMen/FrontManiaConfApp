@@ -1,3 +1,9 @@
-import Dashboard from './Dashboard';
+import Dashboard from './DashboardContainer';
+import * as actions from './DashboardActions';
+import reducer from './DashboardReducer';
 
-export default Dashboard;
+export {
+    Dashboard as default,
+    actions,
+    reducer,
+};

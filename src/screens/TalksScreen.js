@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 import Dashboard from '../components/Dashboard';
-import { DETAILS } from '../navigators/NavigationConsts';
+import {DETAILS} from '../navigators/NavigationConsts';
 
 export default class TalksScreen extends React.Component {
     static navigationOptions = {

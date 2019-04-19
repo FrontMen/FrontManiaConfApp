@@ -1,9 +1,3 @@
-import TalksList from './TalksListContainer';
-import * as actions from './TalksListActions';
-import reducer from './TalksListReducer';
+import TalksList from './TalksList';
 
-export {
-    TalksList as default,
-    actions,
-    reducer,
-};
+export default TalksList;

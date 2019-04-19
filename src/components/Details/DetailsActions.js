@@ -9,7 +9,7 @@ const detailsLoaded = createAction(TALK_DETAILS_LOADED);
 
 export const loadDetails = (id) =>
     (dispatch, getState) => {
-        const {talks} = getState().talks;
+        const {talks} = getState().dashboard;
         const details = talks.find((talk) => talk.id === id);
         dispatch(detailsLoaded(details));
     };
