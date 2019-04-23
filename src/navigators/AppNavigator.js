@@ -5,14 +5,19 @@ import TalksScreen from '../screens/TalksScreen';
 import DetailScreen from '../screens/DetailsScreen';
 import { DETAILS, FAVORITE, TALKS } from './NavigationConsts';
 
-const stackNavigation = createStackNavigator({
+const talksStack = createStackNavigator({
     [TALKS]: TalksScreen,
     [DETAILS]: DetailScreen,
 });
 
-export default createBottomTabNavigator({
-    [TALKS]: stackNavigation,
+const favoriteStack = createStackNavigator({
     [FAVORITE]: FavoriteScreen,
+    [DETAILS]: DetailScreen,
+});
+
+export default createBottomTabNavigator({
+    [TALKS]: talksStack,
+    [FAVORITE]: favoriteStack,
 }, {
     initialRouteName: TALKS,
 });
