@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     talkItemTextContainer: {
-        backgroundColor: '#ff0000',
         flexGrow: 1,
         marginRight: 10,
     },
