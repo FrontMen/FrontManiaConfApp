@@ -20,7 +20,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-    }
+    },
+    talkItemTextContainer: {
+        backgroundColor: '#ff0000',
+        flexGrow: 1,
+        marginRight: 10,
+    },
 });
 
 export default styles;
