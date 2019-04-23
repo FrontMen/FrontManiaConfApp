@@ -1,25 +1,25 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Details from './Details';
+import TalkDetails from './TalkDetails';
 import {bindActionCreators} from 'redux';
 import {
     clearDetails,
     loadDetails,
-} from './DetailsActions';
+} from './TalkDetailsActions';
 
-const DetailsContainer = (props) => {
+const TalkDetailsContainer = (props) => {
     React.useEffect(
         () => {
             props.loadDetails(props.id);
             return props.clearDetails;
         }, [props.id]);
 
-    return <Details {...props}/>
+    return <TalkDetails {...props}/>
 };
 
-const mapStateToProps = ({details}, props) => ({
+const mapStateToProps = ({talkDetails}, props) => ({
     ...props,
-    details,
+    ...talkDetails,
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
@@ -27,4 +27,4 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
     loadDetails,
 }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(DetailsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(TalkDetailsContainer);

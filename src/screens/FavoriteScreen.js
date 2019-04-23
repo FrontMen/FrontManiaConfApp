@@ -1,19 +1,26 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
 import FavoriteList from '../components/FavoriteList';
-import {DETAILS} from '../navigators/NavigationConsts';
+import {
+    SPEAKER_DETAILS,
+    TALK_DETAILS,
+} from '../navigators/NavigationConsts';
 
 export default class FavoriteScreen extends React.Component {
     static navigationOptions = {
         title: "Favorite",
     };
 
-    navigateToDetails = (id) => this.props.navigation.navigate(DETAILS, {id});
+    navigateToTalkDetails = (id) => this.props.navigation.navigate(TALK_DETAILS, {id});
+    navigateToSpeakerDetails = (id) => this.props.navigation.navigate(SPEAKER_DETAILS, {id});
 
     render () {
         return (
             <SafeAreaView>
-                <FavoriteList goToDetails={this.navigateToDetails}/>
+                <FavoriteList
+                    goToTalkDetails={this.navigateToTalkDetails}
+                    goToSpeakerDetails={this.navigateToSpeakerDetails}
+                />
             </SafeAreaView>
         );
     }

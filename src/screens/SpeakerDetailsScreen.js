@@ -1,19 +1,19 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
-import Details from '../components/Details';
+import {SafeAreaView} from 'react-native';
+import SpeakerDetails from '../components/SpeakerDetails';
 
 export default class OtherScreen extends React.Component {
     static navigationOptions = {
-        title: "Details",
+        title: "Speaker",
     };
 
     render () {
-        const { navigation } = this.props;
+        const {navigation} = this.props;
         const id = navigation.getParam('id');
 
         return (
             <SafeAreaView>
-                <Details id={id}/>
+                <SpeakerDetails id={id}/>
             </SafeAreaView>
         )
     }

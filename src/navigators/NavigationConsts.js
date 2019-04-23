@@ -1,3 +1,4 @@
 export const FAVORITE = 'Favorite';
 export const TALKS = 'Talks';
-export const DETAILS = 'Details';
+export const TALK_DETAILS = 'Talk TalkDetails';
+export const SPEAKER_DETAILS = 'Speaker TalkDetails';

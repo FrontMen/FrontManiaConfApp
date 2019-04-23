@@ -1,7 +1,7 @@
 import {
     TALK_DETAILS_CLEAR,
     TALK_DETAILS_LOADED,
-} from './DetailsActionTypes';
+} from './TalkDetailsActionTypes';
 import {createAction} from 'redux-actions';
 
 export const clearDetails = createAction(TALK_DETAILS_CLEAR);

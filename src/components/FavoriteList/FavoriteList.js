@@ -3,12 +3,13 @@ import {View} from 'react-native';
 import TalksList from '../TalksList';
 import styles from './FavoriteList.styles';
 
-const FavoriteList = ({talks, goToDetails}) => (
+const FavoriteList = ({talks, goToTalkDetails, goToSpeakerDetails}) => (
     <View style={styles.favoriteList}>
         <TalksList
             {...{
                 talks,
-                goToDetails,
+                goToTalkDetails,
+                goToSpeakerDetails,
             }}
         />
     </View>

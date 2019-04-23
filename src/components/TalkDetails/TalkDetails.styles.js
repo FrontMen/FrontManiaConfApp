@@ -2,14 +2,14 @@ import {StyleSheet} from 'react-native';
 import {BODY_PADDING} from '../../styles/variables';
 
 const styles = StyleSheet.create({
-    details: {
+    talkDetails: {
         padding: BODY_PADDING,
         height: '100%',
     },
-    detailsTitle: {
+    talkDetailsTitle: {
         fontWeight: '600',
     },
-    detailsDescription: {
+    talkDetailsDescription: {
         marginTop: 10,
         marginBottom: 10,
     }

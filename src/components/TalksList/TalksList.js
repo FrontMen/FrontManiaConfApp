@@ -3,13 +3,14 @@ import {FlatList} from 'react-native';
 import TalkItem from './TalkItem';
 import styles from './TalksList.styles';
 
-const TalksList = ({talks, goToDetails}) => {
+const TalksList = ({talks, goToTalkDetails, goToSpeakerDetails}) => {
     const renderItem = ({item, index}) => (
         <TalkItem
             {...{
                 ...item,
                 style: index === 0 ? styles.firstTalkItem : styles.talkItem,
-                onPress: goToDetails,
+                onTalkPress: goToTalkDetails,
+                onSpeakerPress: goToSpeakerDetails,
             }}
         />
     );

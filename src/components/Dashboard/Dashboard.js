@@ -4,13 +4,14 @@ import RoomsMenu from '../RoomsMenu';
 import TalksList from '../TalksList';
 import styles from './Dashboard.styles';
 
-const Dashboard = ({talks, goToDetails}) => (
+const Dashboard = ({talks, goToTalkDetails, goToSpeakerDetails}) => (
     <View style={styles.dashboardContainer}>
         <RoomsMenu />
         <TalksList
             {...{
                 talks,
-                goToDetails,
+                goToTalkDetails,
+                goToSpeakerDetails,
             }}
         />
     </View>

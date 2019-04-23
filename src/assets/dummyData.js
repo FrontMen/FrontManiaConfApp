@@ -1,7 +1,8 @@
 export const DUMMY_TALKS = [{
     id: '1',
     title: 'How to eat React hooks',
-    author: 'Michael Jackson',
+    speakerId: 'sp1',
+    speaker: 'Michael Jackson',
     company: 'Jackson five',
     timeFrom: '10:00',
     timeTo: '10:45',
@@ -11,7 +12,8 @@ export const DUMMY_TALKS = [{
 }, {
     id: '2',
     title: 'The feature of AngularJS',
-    author: 'James Bond',
+    speakerId: 'sp2',
+    speaker: 'James Bond',
     company: 'Mi6',
     timeFrom: '11:00',
     timeTo: '11:45',
@@ -21,7 +23,8 @@ export const DUMMY_TALKS = [{
 }, {
     id: '3',
     title: 'Why Vue',
-    author: 'Tinker Bell',
+    speakerId: 'sp3',
+    speaker: 'Tinker Bell',
     company: 'Disney',
     timeFrom: '12:00',
     timeTo: '12:45',
@@ -31,7 +34,8 @@ export const DUMMY_TALKS = [{
 }, {
     id: '4',
     title: 'Pair programming principles',
-    author: 'Aeron Lucia',
+    speakerId: 'sp4',
+    speaker: 'Aeron Lucia',
     company: 'Green Peace',
     timeFrom: '12:00',
     timeTo: '12:45',
@@ -41,7 +45,8 @@ export const DUMMY_TALKS = [{
 }, {
     id: '5',
     title: 'Solo programming',
-    author: 'Anton Baldo',
+    speakerId: 'sp5',
+    speaker: 'Anton Baldo',
     company: 'BlaDev',
     timeFrom: '11:00',
     timeTo: '11:45',
@@ -51,7 +56,8 @@ export const DUMMY_TALKS = [{
 }, {
     id: '6',
     title: 'Delegation',
-    author: 'Alban Hippocrates',
+    speakerId: 'sp6',
+    speaker: 'Alban Hippocrates',
     company: 'Adobe',
     timeFrom: '10:00',
     timeTo: '10:45',
@@ -61,7 +67,8 @@ export const DUMMY_TALKS = [{
 }, {
     id: '7',
     title: 'WFH',
-    author: 'Adam Þórbjörn',
+    speakerId: 'sp7',
+    speaker: 'Adam Þórbjörn',
     company: 'Skype',
     timeFrom: '12:00',
     timeTo: '12:45',
@@ -86,4 +93,27 @@ export const DUMMY_ROOMS = [{
     id: 'ro4',
     name: 'Room 4',
     location: 'location 4',
+}];
+
+export const DUMMY_SPEAKERS = [{
+    id: 'sp1',
+    name: 'Michael Jackson',
+}, {
+    id: 'sp2',
+    name: 'James Bond',
+}, {
+    id: 'sp3',
+    name: 'Tinker Bell',
+}, {
+    id: 'sp4',
+    name: 'Aeron Lucia',
+}, {
+    id: 'sp5',
+    name: 'Anton Baldo',
+}, {
+    id: 'sp6',
+    name: 'Alban Hippocrates',
+}, {
+    id: 'sp7',
+    name: 'Adam Þórbjörn',
 }];
