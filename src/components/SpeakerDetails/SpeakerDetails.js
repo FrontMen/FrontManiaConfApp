@@ -1,8 +1,14 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
+import styles from './SpeakerDetails.styles';
 
-const SpeakerDetails = ({name}) => (
-    <View>
+const SpeakerDetails = ({img, name}) => (
+    <View style={styles.speakerDetailsContainer}>
+        <Image
+            source={{uri: img}}
+            style={styles.speakerDetailsImage}
+            resizeMode="contain"
+        />
         <Text>{name}</Text>
     </View>
 );

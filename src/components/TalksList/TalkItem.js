@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    Image,
     View,
     Text,
     TouchableWithoutFeedback,
@@ -12,6 +13,7 @@ const TalkItem = ({
     title,
     speaker,
     speakerId,
+    speakerImg,
     company,
     timeFrom,
     timeTo,
@@ -22,7 +24,13 @@ const TalkItem = ({
 }) => (
     <View style={[styles.talkItemContainer, style]}>
         <TouchableWithoutFeedback onPress={() => onSpeakerPress(speakerId)}>
-            <Text>IMG</Text>
+            <View style={styles.talkItemImageContainer}>
+                <Image
+                    style={styles.talkItemImage}
+                    source={{uri: speakerImg}}
+                    resizeMode="contain"
+                />
+            </View>
         </TouchableWithoutFeedback>
         <TouchableWithoutFeedback onPress={() => onTalkPress(id)}>
             <View style={styles.talkItemTextContainer}>

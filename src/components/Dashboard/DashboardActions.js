@@ -4,7 +4,7 @@ import {
     SELECT_ROOM,
     TALKS_LOADED,
 } from './DashboardActionTypes';
-import {DUMMY_TALKS} from '../../assets/dummyData';
+import {DUMMY_TALKS} from '../../assets/dummy/dummyData';
 
 const talksLoaded = createAction(TALKS_LOADED);
 export const selectRoom = createAction(SELECT_ROOM);

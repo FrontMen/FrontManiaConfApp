@@ -1,6 +1,6 @@
 import {createAction} from 'redux-actions';
 import {ROOMS_LOADED} from './RoomsMenuActionTypes';
-import {DUMMY_ROOMS} from '../../assets/dummyData';
+import {DUMMY_ROOMS} from '../../assets/dummy/dummyData';
 import {actions} from '../Dashboard';
 
 const roomsLoaded = createAction(ROOMS_LOADED);

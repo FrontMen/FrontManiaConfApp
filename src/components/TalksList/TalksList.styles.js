@@ -26,6 +26,15 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         marginRight: 10,
     },
+    talkItemImageContainer: {
+        width: 50,
+        height: '100%',
+    },
+    talkItemImage: {
+        flex: 1,
+        height: undefined,
+        width: undefined,
+    }
 });
 
 export default styles;
