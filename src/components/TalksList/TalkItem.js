@@ -5,10 +5,11 @@ import {
     Text,
     TouchableWithoutFeedback,
 } from 'react-native';
+import Moment from 'moment';
 import FavoriteButton from '../FavoriteButton';
 import styles from './TalksList.styles';
 
-const TalkItem = ({
+const TalkItemComponent = ({
     id,
     title,
     speaker,
@@ -36,7 +37,7 @@ const TalkItem = ({
             <View style={styles.talkItemTextContainer}>
                 <Text>{title}</Text>
                 <Text>{speaker} ({company})</Text>
-                <Text>{timeFrom} - {timeTo}</Text>
+                <Text>{Moment(timeFrom).format('HH:mm')} - {Moment(timeTo).format('HH:mm')}</Text>
             </View>
         </TouchableWithoutFeedback>
         <FavoriteButton
@@ -47,5 +48,33 @@ const TalkItem = ({
         />
     </View>
 );
+
+const TalkItem = (props) => {
+    const {
+        id,
+        title,
+        speaker,
+        speakerId,
+        speakerImg,
+        company,
+        timeFrom,
+        timeTo,
+        isFavorite,
+    } = props;
+
+    return React.useMemo(() =>
+        TalkItemComponent(props), [
+            id,
+            title,
+            speaker,
+            speakerId,
+            speakerImg,
+            company,
+            timeFrom,
+            timeTo,
+            isFavorite,
+        ]
+    );
+};
 
 export default TalkItem;
