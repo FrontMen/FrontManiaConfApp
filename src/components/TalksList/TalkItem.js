@@ -49,32 +49,12 @@ const TalkItemComponent = ({
     </View>
 );
 
-const TalkItem = (props) => {
-    const {
-        id,
-        title,
-        speaker,
-        speakerId,
-        speakerImg,
-        company,
-        timeFrom,
-        timeTo,
-        isFavorite,
-    } = props;
-
-    return React.useMemo(() =>
+const TalkItem = (props) =>
+    React.useMemo(() =>
         TalkItemComponent(props), [
-            id,
-            title,
-            speaker,
-            speakerId,
-            speakerImg,
-            company,
-            timeFrom,
-            timeTo,
-            isFavorite,
+            props.id,
+            props.isFavorite,
         ]
     );
-};
 
 export default TalkItem;

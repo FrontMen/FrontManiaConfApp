@@ -1,8 +1,9 @@
 import React from 'react';
+import Moment from 'moment';
 import {Text, View} from 'react-native';
 import styles from './TalkDetails.styles';
 
-const TalkDetails = ({
+const TalkDetailsComponent = ({
     title,
     speaker,
     company,
@@ -14,8 +15,15 @@ const TalkDetails = ({
         <Text style={styles.talkDetailsTitle}>{title}</Text>
         <Text>{speaker} ({company})</Text>
         <Text style={styles.talkDetailsDescription}>{description}</Text>
-        <Text>{timeFrom} - {timeTo}</Text>
+        <Text>{Moment(timeFrom).format('HH:mm')} - {Moment(timeTo).format('HH:mm')}</Text>
     </View>
 );
+
+const TalkDetails = (props) =>
+    React.useMemo(() =>
+        TalkDetailsComponent(props), [
+            props.title,
+        ]
+    );
 
 export default TalkDetails;
