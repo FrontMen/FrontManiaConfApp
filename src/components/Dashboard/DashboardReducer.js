@@ -5,6 +5,8 @@ import {
     TALKS_LOADED,
 } from './DashboardActionTypes';
 
+const timeSortFunc = (talk1, talk2) => talk1.timeFrom - talk2.timeFrom;
+const sortTalks = (talks) => talks.sort(timeSortFunc);
 const filterTalks = ({talks, roomId}) => talks.filter((talk) => talk.roomId === roomId);
 
 const defaultState = {
@@ -43,7 +45,7 @@ const reducer = handleActions({
     }),
     [TALKS_LOADED]: (state, action) => ({
         ...state,
-        allTalks: action.payload,
+        allTalks: sortTalks(action.payload),
         talks: filterTalks({
             talks: state.allTalks,
             roomId: state.selectedRoomId,
