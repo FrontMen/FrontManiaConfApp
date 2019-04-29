@@ -5,6 +5,7 @@ import {
     SPEAKER_DETAILS,
     TALK_DETAILS,
 } from '../navigators/NavigationConsts';
+import TalkOverlapsModal from '../components/TalkOverlapsModal';
 
 export default class TalksScreen extends React.Component {
     static navigationOptions = {
@@ -21,6 +22,7 @@ export default class TalksScreen extends React.Component {
                     goToTalkDetails={this.navigateToTalkDetails}
                     goToSpeakerDetails={this.navigateToSpeakerDetails}
                 />
+                <TalkOverlapsModal />
             </SafeAreaView>
         )
     }
